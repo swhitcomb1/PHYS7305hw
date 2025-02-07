@@ -3,10 +3,10 @@ import random
 import matplotlib.pyplot as plt
 
 
-numensembles=50000
-sigma=1
-n=2
-num_hist_bins=100
+numensembles=50000 # This is M
+sigma=1 # this is sigma
+n=2 # ignore this, dont need to change this urself
+num_hist_bins=100 # histogram binning specification
 
 #PART A
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +38,7 @@ def genensemblesgaussian(M, stdev, size):
         importanteigenvaluelist[num] = eigvalues[novertwoindex]-eigvalues[novertwoindex-1] # calculates splitting
     return importanteigenvaluelist
 
-# UN COMMENT NEXT SIX LINES TO RUN PART A 
+# UN COMMENT NEXT SIX LINES TO RUN PART A  :)
 
 #for N in [2,4,10]:
 #    splittinglist = genensemblesgaussian(numensembles, sigma, N)
@@ -68,8 +68,7 @@ def comparewithwigner(numdimensions):
     plt.show()
     plt.close()
 
-# UN COMMENT NEXT TWO LINES TO RUN PART F
-
+# UN COMMENT NEXT TWO LINES TO RUN PART E
 #for i in [2, 4, 10]:
 #    comparewithwigner(i)
 
@@ -151,5 +150,6 @@ def comparegaussian(N):
 
 #comparegaussian(10)
 
-for i in [2, 4, 10]:
-    comparepmwithwigner(i)
+# Uncomment below to check part F!!
+#for i in [2, 4, 10]:
+#    comparepmwithwigner(i)
